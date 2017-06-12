@@ -12,7 +12,8 @@
   <%= dog_fields.number_field :age %>
   <br>
   <%= dog_fields.label :owner %>
-  <%= dog_fields.text_field :owner %>
+  <%= dog_fields.collection_select :owner_id, Owner.all, :id, :name %>
+  <!-- this is saying, pass back as owner_id. Go into Owner class, get them all, pull them by their id, then show me their name -->
   <br>
   <%= dog_fields.submit %>
 <% end %>
