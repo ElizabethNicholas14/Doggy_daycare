@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :owners
   resources :dogs, only: [:index, :new, :create, :show, :edit, :update, :delete]
   #resources is a helper method. we really only need resources: dogs (resources is a helper on the dog controller)(the current array are all the views and methods)
 
